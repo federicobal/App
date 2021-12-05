@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
+//    id 'kotlin-android-extensions'
 }
 
 android {
@@ -32,19 +34,136 @@ android {
     buildFeatures {
         viewBinding true
     }
+    testOptions {
+        unitTests.includeAndroidResources = true
+    }
 }
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+    //View
     implementation 'androidx.appcompat:appcompat:1.3.1'
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.0'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0'
+    implementation 'androidx.annotation:annotation:1.2.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    // KTX Core
+    implementation 'androidx.core:core-ktx:1.7.0'
+//    implementation 'androidx.core:core-ktx:1.5.0'
+
+
+    // KTX Navigation Components
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
+
+    // KTX ViewModel y LiveData
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0'
+//    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1'
+//    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1'
+
+    // Coroutines
+    //implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.2"
+
+    // Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2'
+    implementation 'com.squareup.retrofit2:converter-moshi:2.9.0'
+
+    //Json
+    implementation 'com.squareup.moshi:moshi:1.9.3'
+    implementation 'com.squareup.moshi:moshi-kotlin:1.9.3'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    kapt 'com.squareup.moshi:moshi-kotlin-codegen:1.9.3'
+
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.3.1'
+    implementation 'com.squareup.okhttp3:okhttp:3.1.2'
+//    implementation 'com.google.code.gson:gson:2.7'
+
+    // Room
+    implementation 'androidx.room:room-ktx:2.3.0'
+    implementation "androidx.room:room-runtime:2.3.0"
+    kapt "androidx.room:room-compiler:2.3.0"
+    annotationProcessor 'androidx.room:room-compiler:2.3.0'
+
+    //Compose
+//    implementation "androidx.compose.ui:ui:1.0.0-beta06"
+//    implementation "androidx.compose.foundation:foundation:1.0.0-beta06"
+
+    //Inject
+    implementation 'com.google.dagger:dagger:2.28.3'
+    kapt 'com.google.dagger:dagger-compiler:2.25.4'
+
+    //BarcodeScanner
+    implementation 'me.dm7.barcodescanner:zbar:1.8.4'
+
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+
+    // Hilt
+//    implementation "com.google.dagger:hilt-android:2.33-beta"
+//    kapt "com.google.dagger:hilt-android-compiler:2.33-beta"
+//    implementation 'androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03'
+//    kapt 'androidx.hilt:hilt-compiler:1.0.0-beta01'
+
+//
+//    //Test Opcion
+//    androidTestImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.3.3'
     testImplementation 'junit:junit:4.+'
+//    androidTestImplementation 'junit:junit:4.+'
+//    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+//    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+
+//    //Test Opcion 2
+//    // Required -- JUnit 4 framework
+//    testImplementation("junit:junit:4.12")
+//    // Optional -- Robolectric environment
+//    testImplementation('androidx.test:core:1.4.0')
+//    // Optional -- Mockito framework
+//    testImplementation("org.mockito:mockito-core:1.10.19")
+
+
+    ////Test Opcion 3
+    //    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.0-M1'
+    //    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.0-M1'
+    //    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.8.0-M1'
+    ////    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.0-M1
+
+    //Test Option 4
+    androidTestImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.3.3'
+    androidTestImplementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+//    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation "androidx.navigation:navigation-testing:2.3.5"
+//    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    androidTestImplementation "androidx.test:core:1.4.0"
+    androidTestImplementation "androidx.test:core-ktx:1.4.0"
+    androidTestImplementation "androidx.test.ext:junit-ktx:1.1.2-beta01"
+    androidTestImplementation "androidx.test:runner:1.3.0-beta01"
+//    androidTestImplementation ("org.robolectric:robolectric:4.3.1") {
+//        exclude group: "org.apache.maven.wagon"
+//        exclude group: "org.apache.maven"
+//    }
+    androidTestImplementation "androidx.test.ext:truth:1.3.0-beta01"
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+
+//    //Firebase
+//    implementation 'com.google.firebase:firebase-common-ktx:19.5.0'
+//    // Import the Firebase BoM
+//    implementation platform('com.google.firebase:firebase-bom:28.4.0')
+//    // Add the dependency for the Firebase SDK for Google Analytics
+//    // When using the BoM, don't specify versions in Firebase dependencies
+////    implementation 'com.google.firebase:firebase-analytics'
+//    // Add the dependencies for any other desired Firebase prfirebase:firebaseoducts
+//    // https://firebase.google.com/docs/android/setup#available-libraries
+//    // Declare the KTX library instead (which automatically has a dependency on the base library)
+//    implementation 'com.google.firebase:firebase-analytics-ktx'
+
+
+
 }
