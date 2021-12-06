@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: junit:junit:4.2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.2/9934c403eb780ca94f34f929f1d86ec0f13711a7/junit-4.2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.2/7100d339163e502e1e82a85bbe719f60fe677c53/junit-4.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.2/3b17057e22e7cab884088d7d1fdd27a0af9e513b/junit-4.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
