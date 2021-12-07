@@ -2,8 +2,8 @@
   <library name="Gradle: me.dm7.barcodescanner:core:1.8.4@aar">
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/1e5cd4204c1f22c1856420b8c16039f1/transformed/jetified-core-1.8.4/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/1e5cd4204c1f22c1856420b8c16039f1/transformed/jetified-core-1.8.4/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/1e5cd4204c1f22c1856420b8c16039f1/transformed/jetified-core-1.8.4/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/1e5cd4204c1f22c1856420b8c16039f1/transformed/jetified-core-1.8.4/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

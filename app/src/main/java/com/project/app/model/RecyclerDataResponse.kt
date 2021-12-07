@@ -1,4 +1,7 @@
 package com.project.app.model
 
-class RecyclerDataResponse {
-}
+
+data class RecyclerDataResponse(
+    val name:String?,
+    val observation:String?,
+    val urlimg:String? )

@@ -1,10 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: me.dm7.barcodescanner:zbar:1.8.4@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/f80ae0ed0eb8e692efef9037e8f103f6/transformed/jetified-zbar-1.8.4/jars/classes.jar!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/f80ae0ed0eb8e692efef9037e8f103f6/transformed/jetified-zbar-1.8.4/jars/libs/zbar.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f80ae0ed0eb8e692efef9037e8f103f6/transformed/jetified-zbar-1.8.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/57cf7e438bcdca2bfe566d654cdcd221/transformed/jetified-zbar-1.8.4/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/f80ae0ed0eb8e692efef9037e8f103f6/transformed/jetified-zbar-1.8.4/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f80ae0ed0eb8e692efef9037e8f103f6/transformed/jetified-zbar-1.8.4/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/f80ae0ed0eb8e692efef9037e8f103f6/transformed/jetified-zbar-1.8.4/jars/libs/zbar.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

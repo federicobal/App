@@ -13,7 +13,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.project.app.R
 import com.project.app.databinding.FragmentHomeBinding
-import com.project.app.model.RecyclerList
+import com.project.app.model.RecyclerData
 
 class HomeFragment : Fragment() {
 
@@ -54,10 +54,10 @@ class HomeFragment : Fragment() {
         homeViewModel =
             ViewModelProvider(this).get(HomeViewModel::class.java)
         //viewLifecycleOwner/ this
-        homeViewModel.getLiveDataObserver().observe(viewLifecycleOwner, object: Observer<RecyclerList>{
-            override fun onChanged(t: RecyclerList?) {
+        homeViewModel.getLiveDataObserver().observe(viewLifecycleOwner, object: Observer<List<RecyclerData>>{
+            override fun onChanged(t: List<RecyclerData>?) {
                 if (t!=null){
-                    recyclerViewAdapter.setUpdateList(t.items)
+                    recyclerViewAdapter.setUpdateList(t)
                     recyclerViewAdapter.notifyDataSetChanged()
                 }else
                 {
@@ -67,7 +67,7 @@ class HomeFragment : Fragment() {
             }
 
         })
-        homeViewModel.makeApiCallFrutas()
+        homeViewModel.makeApiCall()
 
 
 
